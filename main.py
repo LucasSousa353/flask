@@ -15,7 +15,7 @@ def user():
 def context():
     user_agent = request.headers.get('User-Agent')
     url = request.host_url
-    ip = request.host
+    ip = request.remote_addr
     return '<h1>Avaliação contínua: Aula 030</h1><h2>Seu navegador é: {}</h2><h2>O IP do computador remoto é: {}</h2><h2>O host da aplicação é: {}</h2><p><a href="/">Voltar</a></p>'.format(user_agent, url, ip)
 
 if __name__ == '__main__':
